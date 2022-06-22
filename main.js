@@ -1,5 +1,3 @@
-const { response } = require("express")
-
 $(document).ready(function () {
   $('#title').autocomplete({
     source: async function(req, res) {
@@ -12,7 +10,7 @@ $(document).ready(function () {
             id: result._id
           }
         }))
-      response(data)
+      res(data)
     },
     minLength: 2,
     select: function(event, ui) {
